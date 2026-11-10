@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Market · Job Watcher</title>
+  <meta name="description" content="Six findings about the job market, computed from the history file in the browser.">
+  <meta name="theme-color" content="#090d1a">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <nav class="nav"><div class="nav-inner">
+    <a class="brand" href="index.html"><img src="icons/icon.svg" alt=""><span>Job Watcher</span></a>
+    <div class="nav-links">
+      <a href="index.html">Today</a>
+      <a href="browse.html">Browse</a>
+      <a href="market.html" aria-current="page">Market</a>
+    </div>
+  </div></nav>
+
+  <header class="hero">
+    <div>
+      <span class="eyebrow">Market report</span>
+      <h1>What the <span class="grad">history</span> shows</h1>
+      <p class="lede">Every number below is computed in your browser from <a href="data/history.csv">data/history.csv</a>, so the report grows with each daily run. History from <strong id="span">…</strong>.</p>
+    </div>
+  </header>
+
+  <main>
+    <div id="offline" class="banner" hidden>You're offline. Showing the last data this device loaded.</div>
+    <div id="error" class="banner" hidden></div>
+
+    <section class="card finding" id="f1">
+      <span class="kicker">01 · New postings per day</span>
+      <h2 class="head">…</h2><p class="text"></p>
+      <p class="how">How it's computed: postings whose <code>first_seen</code> is that day, leaving out first-run postings (<code>first_run = true</code>), for all postings and for the data-analyst role (<code>in_role = true</code>).</p>
+      <div class="chart-box"><canvas></canvas></div>
+    </section>
+
+    <section class="card finding" id="f2">
+      <span class="kicker">02 · Removed postings per day</span>
+      <h2 class="head">…</h2><p class="text"></p>
+      <p class="how">How it's computed: postings whose <code>removed_date</code> is that day.</p>
+      <div class="chart-box"><canvas></canvas></div>
+    </section>
+
+    <section class="card finding" id="f3">
+      <span class="kicker">03 · Open postings per employer</span>
+      <h2 class="head">…</h2><p class="text"></p>
+      <p class="how">How it's computed: postings with <code>status = open</code> after the last run, counted by <code>employer</code>; the darker part of each bar is the data-analyst role.</p>
+      <div class="chart-box tall"><canvas></canvas></div>
+    </section>
+
+    <section class="card finding" id="f4">
+      <span class="kicker">04 · Days open</span>
+      <h2 class="head">…</h2><p class="text"></p>
+      <p class="how">How it's computed: for removed postings that are not first-run postings, <code>removed_date − first_seen</code> in days. The heading reports the median; the chart shows how many postings closed after each number of days.</p>
+      <div class="chart-box"><canvas></canvas></div>
+    </section>
+
+    <section class="card finding" id="f5">
+      <span class="kicker">05 · Share removed within seven days</span>
+      <h2 class="head">…</h2><p class="text"></p>
+      <p class="how">How it's computed: among postings that are not first-run postings and were first seen at least 7 days before the last run, the share with a <code>removed_date</code> where <code>removed_date − first_seen ≤ 7</code> days.</p>
+      <div class="chart-box"><canvas></canvas></div>
+    </section>
+
+    <section class="card finding" id="f6">
+      <span class="kicker">06 · Top locations</span>
+      <h2 class="head">…</h2><p class="text"></p>
+      <p class="how">How it's computed: open postings counted by their <code>location</code> text as the board gives it (Workday boards list several-city postings as "N Locations"); the 15 most common are shown.</p>
+      <div class="chart-box tall"><canvas></canvas></div>
+    </section>
+  </main>
+  <footer>Postings with <code>first_run = true</code> were already open when the tool started watching their board, so their start date is unknown; findings 1, 4 and 5 leave them out.</footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+  <script src="assets/app.js"></script>
+  <script src="assets/market.js"></script>
+</body>
+</html>
