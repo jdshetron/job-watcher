@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Browse · Job Watcher</title>
+  <meta name="description" content="Browse open postings, filter, and keep a shortlist.">
+  <meta name="theme-color" content="#090d1a">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <nav class="nav"><div class="nav-inner">
+    <a class="brand" href="index.html"><img src="icons/icon.svg" alt=""><span>Job Watcher</span></a>
+    <div class="nav-links">
+      <a href="index.html">Today</a>
+      <a href="browse.html" aria-current="page">Browse</a>
+      <a href="market.html">Market</a>
+    </div>
+  </div></nav>
+
+  <header class="hero">
+    <div>
+      <span class="eyebrow">Open postings</span>
+      <h1>Find your <span class="grad">next role</span></h1>
+      <p class="lede">Filter every open posting, then ☆ star the ones you like. Your shortlist stays in this browser.</p>
+    </div>
+  </header>
+
+  <main>
+    <div id="offline" class="banner" hidden>You're offline. Showing the last data this device loaded.</div>
+    <div id="error" class="banner" hidden></div>
+
+    <section class="card" id="shortlist-card">
+      <h2>★ Your shortlist <span class="tag" id="short-count">0</span></h2>
+      <p class="muted small" id="short-empty">Nothing starred yet. Tap ☆ on any posting below to save it here.</p>
+      <ul id="shortlist" class="postings"></ul>
+    </section>
+
+    <section class="card">
+      <div class="toolbar">
+        <div class="segmented" role="group" aria-label="Which postings">
+          <button type="button" data-scope="role" aria-pressed="true">Data analyst</button>
+          <button type="button" data-scope="all" aria-pressed="false">All postings</button>
+        </div>
+        <span class="muted small" id="result-count"></span>
+      </div>
+      <div class="controls">
+        <label class="field wide">Search titles<input id="q" type="search" placeholder="e.g. senior, SQL, marketing" autocomplete="off"></label>
+        <label class="field">Employer<select id="employer"><option value="">All employers</option></select></label>
+        <label class="field">Location<input id="location" type="search" list="locations" placeholder="Any location" autocomplete="off"><datalist id="locations"></datalist></label>
+        <label class="field">Days open<select id="days">
+          <option value="">Any</option>
+          <option value="0-1">New (0–1 days)</option>
+          <option value="0-7">Up to a week</option>
+          <option value="0-30">Up to 30 days</option>
+          <option value="31-99999">More than 30 days</option>
+        </select></label>
+        <label class="field">Sort<select id="sort">
+          <option value="new">First seen: newest first</option>
+          <option value="old">First seen: oldest first</option>
+        </select></label>
+      </div>
+      <ul id="results" class="postings"></ul>
+      <button id="more" class="btn more" type="button" hidden></button>
+    </section>
+  </main>
+  <footer>Days open = days from the first day the tool saw a posting to the last run. Postings that were already open on the first run show "≥", since their real start is unknown.</footer>
+  <script src="assets/app.js"></script>
+  <script src="assets/browse.js"></script>
+</body>
+</html>
