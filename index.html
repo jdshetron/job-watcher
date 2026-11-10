@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Today · Job Watcher</title>
+  <meta name="description" content="Daily watch of data-analyst openings at 23 employers.">
+  <meta name="theme-color" content="#090d1a">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <nav class="nav"><div class="nav-inner">
+    <a class="brand" href="index.html"><img src="icons/icon.svg" alt=""><span>Job Watcher</span></a>
+    <div class="nav-links">
+      <a href="index.html" aria-current="page">Today</a>
+      <a href="browse.html">Browse</a>
+      <a href="market.html">Market</a>
+    </div>
+  </div></nav>
+
+  <header class="hero">
+    <div>
+      <span class="eyebrow"><span class="pulse"></span>Watching 23 employers daily</span>
+      <h1>Today's <span class="grad">data analyst</span> job market</h1>
+      <p class="lede">Last run <strong id="last-run">loading…</strong></p>
+    </div>
+    <div class="hero-card">
+      <div class="label">Newest data-analyst openings</div>
+      <div id="ticker" class="ticker"></div>
+    </div>
+  </header>
+
+  <main>
+    <div id="offline" class="banner" hidden>You're offline. Showing the last data this device loaded.</div>
+    <div id="error" class="banner" hidden></div>
+
+    <div class="tiles">
+      <div class="tile" style="--tint:var(--accent-2)"><div class="label">Days with a successful run</div><div class="value" id="t-days">—</div><div class="sub" id="t-days-sub"></div></div>
+      <div class="tile"><div class="label">Open postings</div><div class="value" id="t-open">—</div><div class="sub" id="t-open-sub"></div></div>
+      <div class="tile"><div class="label">New today</div><div class="value up" id="t-new">—</div><div class="sub" id="t-new-sub"></div></div>
+      <div class="tile" style="--tint:var(--down)"><div class="label">Removed today</div><div class="value down" id="t-removed">—</div><div class="sub" id="t-removed-sub"></div></div>
+    </div>
+
+    <section class="card">
+      <div class="toolbar">
+        <h2>Changes in the latest run</h2>
+        <div class="segmented" role="group" aria-label="Which postings">
+          <button type="button" data-scope="role" aria-pressed="true">Data analyst</button>
+          <button type="button" data-scope="all" aria-pressed="false">All postings</button>
+        </div>
+      </div>
+      <p class="muted small" id="first-note" hidden>This is the first run: every posting was already open when the watch began, so nothing counts as new yet. New and removed postings show up from the second day on.</p>
+      <div class="grid grid-2">
+        <div>
+          <h3>New postings <span class="tag" id="new-count"></span></h3>
+          <ul id="new-list" class="postings"></ul>
+          <button id="new-more" class="btn more" type="button" hidden></button>
+        </div>
+        <div>
+          <h3>Removed postings <span class="tag" id="removed-count"></span></h3>
+          <ul id="removed-list" class="postings"></ul>
+          <button id="removed-more" class="btn more" type="button" hidden></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Sources <span class="tag" id="sources-ok"></span></h2>
+      <p class="muted small">Every employer's job board, read as JSON through the applicant tracking system that hosts it.</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Employer</th><th>System</th><th>Status</th><th class="num">Postings</th><th class="num">Data analyst</th><th>Error</th></tr></thead>
+        <tbody id="sources"></tbody>
+      </table></div>
+    </section>
+  </main>
+  <footer>Data: each employer's public job board (Greenhouse, Lever, Ashby, SmartRecruiters, Workday). Updated daily by GitHub Actions.</footer>
+  <script src="assets/app.js"></script>
+  <script src="assets/today.js"></script>
+</body>
+</html>
