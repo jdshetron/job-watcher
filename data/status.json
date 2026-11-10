@@ -1,0 +1,196 @@
+{
+  "run_time": "2026-11-10T15:32:01Z",
+  "run_date": "2026-11-10",
+  "first_run_date": "2026-11-10",
+  "days_with_success": 1,
+  "open": 12258,
+  "open_in_role": 254,
+  "new_today": 0,
+  "removed_today": 0,
+  "sources": [
+    {
+      "name": "airbnb",
+      "employer": "Airbnb",
+      "ats": "greenhouse",
+      "ok": true,
+      "count": 206,
+      "error": ""
+    },
+    {
+      "name": "stripe",
+      "employer": "Stripe",
+      "ats": "greenhouse",
+      "ok": true,
+      "count": 773,
+      "error": ""
+    },
+    {
+      "name": "robinhood",
+      "employer": "Robinhood",
+      "ats": "greenhouse",
+      "ok": true,
+      "count": 153,
+      "error": ""
+    },
+    {
+      "name": "coinbase",
+      "employer": "Coinbase",
+      "ats": "greenhouse",
+      "ok": true,
+      "count": 285,
+      "error": ""
+    },
+    {
+      "name": "lyft",
+      "employer": "Lyft",
+      "ats": "greenhouse",
+      "ok": true,
+      "count": 156,
+      "error": ""
+    },
+    {
+      "name": "pinterest",
+      "employer": "Pinterest",
+      "ats": "greenhouse",
+      "ok": true,
+      "count": 166,
+      "error": ""
+    },
+    {
+      "name": "reddit",
+      "employer": "Reddit",
+      "ats": "greenhouse",
+      "ok": true,
+      "count": 157,
+      "error": ""
+    },
+    {
+      "name": "instacart",
+      "employer": "Instacart",
+      "ats": "greenhouse",
+      "ok": true,
+      "count": 88,
+      "error": ""
+    },
+    {
+      "name": "affirm",
+      "employer": "Affirm",
+      "ats": "greenhouse",
+      "ok": true,
+      "count": 214,
+      "error": ""
+    },
+    {
+      "name": "doordash",
+      "employer": "DoorDash",
+      "ats": "greenhouse",
+      "ok": true,
+      "count": 437,
+      "error": ""
+    },
+    {
+      "name": "duolingo",
+      "employer": "Duolingo",
+      "ats": "greenhouse",
+      "ok": true,
+      "count": 61,
+      "error": ""
+    },
+    {
+      "name": "chime",
+      "employer": "Chime",
+      "ats": "greenhouse",
+      "ok": true,
+      "count": 66,
+      "error": ""
+    },
+    {
+      "name": "palantir",
+      "employer": "Palantir",
+      "ats": "lever",
+      "ok": true,
+      "count": 304,
+      "error": ""
+    },
+    {
+      "name": "spotify",
+      "employer": "Spotify",
+      "ats": "lever",
+      "ok": true,
+      "count": 86,
+      "error": ""
+    },
+    {
+      "name": "ramp",
+      "employer": "Ramp",
+      "ats": "ashby",
+      "ok": true,
+      "count": 172,
+      "error": ""
+    },
+    {
+      "name": "notion",
+      "employer": "Notion",
+      "ats": "ashby",
+      "ok": true,
+      "count": 153,
+      "error": ""
+    },
+    {
+      "name": "snowflake",
+      "employer": "Snowflake",
+      "ats": "ashby",
+      "ok": true,
+      "count": 372,
+      "error": ""
+    },
+    {
+      "name": "servicenow",
+      "employer": "ServiceNow",
+      "ats": "smartrecruiters",
+      "ok": true,
+      "count": 747,
+      "error": ""
+    },
+    {
+      "name": "bosch",
+      "employer": "Bosch",
+      "ats": "smartrecruiters",
+      "ok": true,
+      "count": 1133,
+      "error": ""
+    },
+    {
+      "name": "nvidia",
+      "employer": "NVIDIA",
+      "ats": "workday",
+      "ok": true,
+      "count": 1999,
+      "error": ""
+    },
+    {
+      "name": "salesforce",
+      "employer": "Salesforce",
+      "ats": "workday",
+      "ok": true,
+      "count": 1553,
+      "error": ""
+    },
+    {
+      "name": "capital-one",
+      "employer": "Capital One",
+      "ats": "workday",
+      "ok": true,
+      "count": 2063,
+      "error": ""
+    },
+    {
+      "name": "mastercard",
+      "employer": "Mastercard",
+      "ats": "workday",
+      "ok": true,
+      "count": 914,
+      "error": ""
+    }
+  ]
+}
