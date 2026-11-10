@@ -1,6 +1,6 @@
 """Draw the app icons (icons/icon-192.png, icons/icon-512.png) with the standard library only.
 
-The design matches icons/icon.svg: a screen outline with a play triangle and a stand.
+The design matches icons/icon.svg: a mint briefcase with a violet clasp on dark navy.
 Run once: python tools/make_icons.py
 """
 
@@ -8,22 +8,22 @@ import struct
 import zlib
 from pathlib import Path
 
-BG = (0x12, 0x11, 0x10)
-FG = (0xF0, 0xB4, 0x29)
+BG = (0x09, 0x0D, 0x1A)
+FG = (0x3E, 0xE6, 0xA8)
+CLASP = (0x8B, 0x7B, 0xFF)
 
 
 def pixel(x, y):
     """Colour at (x, y) in a 64x64 design space (floats)."""
-    # screen outline: rect 10..54 x 16..46, stroke 4
-    outer = 8 <= x <= 56 and 14 <= y <= 48
-    inner = 12 <= x <= 52 and 18 <= y <= 44
-    if outer and not inner:
+    if 28 <= x <= 36 and 27 <= y <= 37:          # clasp
+        return CLASP
+    if 8 <= x <= 56 and 30 <= y <= 34:           # seam
+        return BG
+    if 8 <= x <= 56 and 18 <= y <= 52:           # body
         return FG
-    # play triangle: (28,24) (40,31) (28,38)
-    if 28 <= x <= 40 and abs(y - 31) <= (40 - x) * 7 / 12:
-        return FG
-    # stand
-    if 20 <= x <= 44 and 50 <= y <= 54:
+    handle_outer = 22 <= x <= 42 and 10 <= y <= 20
+    handle_inner = 26 <= x <= 38 and 14 <= y <= 20
+    if handle_outer and not handle_inner:        # handle
         return FG
     return BG
 
