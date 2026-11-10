@@ -1,10 +1,10 @@
 {
-  "run_time": "2026-11-10T16:18:08Z",
+  "run_time": "2026-11-10T17:10:32Z",
   "run_date": "2026-11-10",
   "first_run_date": "2026-11-10",
   "days_with_success": 1,
-  "open": 13748,
-  "open_in_role": 207,
+  "open": 13756,
+  "open_in_role": 205,
   "new_today": 0,
   "removed_today": 0,
   "sources": [
@@ -13,7 +13,7 @@
       "employer": "Airbnb",
       "ats": "greenhouse",
       "ok": true,
-      "count": 204,
+      "count": 205,
       "error": ""
     },
     {
@@ -53,7 +53,7 @@
       "employer": "Pinterest",
       "ats": "greenhouse",
       "ok": true,
-      "count": 166,
+      "count": 165,
       "error": ""
     },
     {
@@ -61,7 +61,7 @@
       "employer": "Reddit",
       "ats": "greenhouse",
       "ok": true,
-      "count": 157,
+      "count": 155,
       "error": ""
     },
     {
@@ -85,7 +85,7 @@
       "employer": "DoorDash",
       "ats": "greenhouse",
       "ok": true,
-      "count": 438,
+      "count": 443,
       "error": ""
     },
     {
@@ -109,7 +109,7 @@
       "employer": "Palantir",
       "ats": "lever",
       "ok": true,
-      "count": 304,
+      "count": 307,
       "error": ""
     },
     {
@@ -157,7 +157,7 @@
       "employer": "Bosch",
       "ats": "smartrecruiters",
       "ok": true,
-      "count": 1132,
+      "count": 1131,
       "error": ""
     },
     {
@@ -181,7 +181,7 @@
       "employer": "Capital One",
       "ats": "workday",
       "ok": true,
-      "count": 2063,
+      "count": 2057,
       "error": ""
     },
     {
@@ -189,7 +189,7 @@
       "employer": "Mastercard",
       "ats": "workday",
       "ok": true,
-      "count": 912,
+      "count": 913,
       "error": ""
     },
     {
@@ -197,7 +197,7 @@
       "employer": "Tyson Foods",
       "ats": "workday",
       "ok": true,
-      "count": 706,
+      "count": 709,
       "error": ""
     },
     {
@@ -205,7 +205,7 @@
       "employer": "University of Arkansas System",
       "ats": "workday",
       "ok": true,
-      "count": 782,
+      "count": 787,
       "error": ""
     }
   ]
