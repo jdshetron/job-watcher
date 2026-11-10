@@ -1,7 +1,7 @@
 {
   "name": "Job Watcher: Data Analyst",
   "short_name": "Job Watcher",
-  "description": "Daily watch of data-analyst openings at 23 employers.",
+  "description": "Daily watch of data-analyst openings at 25 employers.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",

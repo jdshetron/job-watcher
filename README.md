@@ -3,7 +3,7 @@
 [![Tests](https://github.com/jdshetron/job-watcher/actions/workflows/tests.yml/badge.svg)](https://github.com/jdshetron/job-watcher/actions/workflows/tests.yml)
 [![Daily run](https://github.com/jdshetron/job-watcher/actions/workflows/daily.yml/badge.svg)](https://github.com/jdshetron/job-watcher/actions/workflows/daily.yml)
 
-Every day, on its own, this tool reads the job boards of 23 employers, compares them with what it
+Every day, on its own, this tool reads the job boards of 25 employers, compares them with what it
 saw before, records which postings are new and which are gone, opens a GitHub Issue with the
 changes, and publishes the result to a website. The role it watches for is **data analyst**.
 
@@ -39,6 +39,12 @@ No web page HTML is read.
 | `salesforce` | Salesforce | Workday | `POST salesforce.wd12.myworkdayjobs.com/wday/cxs/salesforce/External_Career_Site/jobs` |
 | `capital-one` | Capital One | Workday | `POST capitalone.wd12.myworkdayjobs.com/wday/cxs/capitalone/Capital_One/jobs` |
 | `mastercard` | Mastercard | Workday | `POST mastercard.wd1.myworkdayjobs.com/wday/cxs/mastercard/CorporateCareers/jobs` |
+| `tyson` | Tyson Foods (Springdale, AR) | Workday | `POST tysonfoods.wd5.myworkdayjobs.com/wday/cxs/tysonfoods/TSN/jobs` |
+| `uark-system` | University of Arkansas System | Workday | `POST uasys.wd5.myworkdayjobs.com/wday/cxs/uasys/UASYS/jobs` |
+
+Tyson Foods and the University of Arkansas System were added on 2026-11-10 so the Near me page has
+employers in Northwest Arkansas; their first raw file is their first run. (Walmart, J.B. Hunt and
+Arvest were tried but don't offer a job board the tool can read without a login.)
 
 **Search term:** Bosch's board lists more than 5,000 postings, so it is requested with the search
 term **`data`** (`q=data`), which returns about 1,100. Every other board is read in full. If any
@@ -181,7 +187,7 @@ that loads pages and data from the network when online and serves the last saved
 
 | File | What it does |
 |---|---|
-| `watcher/config.py` | The 23 sources (employer, applicant tracking system, board settings, search term) and request settings |
+| `watcher/config.py` | The 25 sources (employer, applicant tracking system, board settings, search term) and request settings |
 | `watcher/fetch.py` | Calls each board (one function per tracking system, with paging and retries) and writes the raw `.json.gz` files |
 | `watcher/convert.py` | Converts each board's response to the common columns |
 | `watcher/role.py` | The data-analyst title rule |

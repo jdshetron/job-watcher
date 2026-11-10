@@ -46,6 +46,11 @@ SOURCES = [
      "host": "capitalone.wd12.myworkdayjobs.com", "tenant": "capitalone", "site": "Capital_One"},
     {"name": "mastercard", "employer": "Mastercard", "ats": "workday",
      "host": "mastercard.wd1.myworkdayjobs.com", "tenant": "mastercard", "site": "CorporateCareers"},
+    # Northwest Arkansas / Arkansas employers (added 2026-11-10 for the Near me page)
+    {"name": "tyson", "employer": "Tyson Foods", "ats": "workday",
+     "host": "tysonfoods.wd5.myworkdayjobs.com", "tenant": "tysonfoods", "site": "TSN"},
+    {"name": "uark-system", "employer": "University of Arkansas System", "ats": "workday",
+     "host": "uasys.wd5.myworkdayjobs.com", "tenant": "uasys", "site": "UASYS"},
 ]
 
 BY_NAME = {s["name"]: s for s in SOURCES}
