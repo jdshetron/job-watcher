@@ -1,10 +1,10 @@
 {
-  "run_time": "2026-11-10T16:01:47Z",
+  "run_time": "2026-11-10T16:18:08Z",
   "run_date": "2026-11-10",
   "first_run_date": "2026-11-10",
   "days_with_success": 1,
-  "open": 12255,
-  "open_in_role": 200,
+  "open": 13748,
+  "open_in_role": 207,
   "new_today": 0,
   "removed_today": 0,
   "sources": [
@@ -133,7 +133,7 @@
       "employer": "Notion",
       "ats": "ashby",
       "ok": true,
-      "count": 153,
+      "count": 152,
       "error": ""
     },
     {
@@ -141,7 +141,7 @@
       "employer": "Snowflake",
       "ats": "ashby",
       "ok": true,
-      "count": 372,
+      "count": 373,
       "error": ""
     },
     {
@@ -165,7 +165,7 @@
       "employer": "NVIDIA",
       "ats": "workday",
       "ok": true,
-      "count": 1999,
+      "count": 2000,
       "error": ""
     },
     {
@@ -173,7 +173,7 @@
       "employer": "Salesforce",
       "ats": "workday",
       "ok": true,
-      "count": 1551,
+      "count": 1557,
       "error": ""
     },
     {
@@ -181,7 +181,7 @@
       "employer": "Capital One",
       "ats": "workday",
       "ok": true,
-      "count": 2064,
+      "count": 2063,
       "error": ""
     },
     {
@@ -189,7 +189,23 @@
       "employer": "Mastercard",
       "ats": "workday",
       "ok": true,
-      "count": 913,
+      "count": 912,
+      "error": ""
+    },
+    {
+      "name": "tyson",
+      "employer": "Tyson Foods",
+      "ats": "workday",
+      "ok": true,
+      "count": 706,
+      "error": ""
+    },
+    {
+      "name": "uark-system",
+      "employer": "University of Arkansas System",
+      "ats": "workday",
+      "ok": true,
+      "count": 782,
       "error": ""
     }
   ]
