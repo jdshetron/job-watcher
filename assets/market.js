@@ -71,7 +71,9 @@
     const all = countBy(open, r => r.employer), role = countBy(open.filter(r => r.in_role), r => r.employer);
     const emps = [...all.keys()].sort((x, y) => all.get(y) - all.get(x));
     const top = emps[0], topRole = [...role.keys()].sort((x, y) => role.get(y) - role.get(x))[0];
-    const head = top ? `${top} has the most open postings (${fmtInt(all.get(top))}); ${topRole || "no one"} has the most data-analyst openings` : "No open postings";
+    const head = !top ? "No open postings"
+      : topRole === top ? `${top} has the most open postings (${fmtInt(all.get(top))}) and the most data-analyst openings (${fmtInt(role.get(top))})`
+      : `${top} has the most open postings (${fmtInt(all.get(top))}); ${topRole || "no one"} has the most data-analyst openings`;
     const text = `${plural(open.length, "posting")} are open across ${plural(emps.length, "employer")}. ` +
       (topRole ? `${topRole} lists ${fmtInt(role.get(topRole))} data-analyst roles, ${fmtPct(role.get(topRole) / all.get(topRole))} of its openings.` : "");
     new Chart(finding("f3", head, text), {
@@ -124,12 +126,16 @@
 
   // 6. Top locations among open postings.
   {
-    const open = rows.filter(r => r.status === "open" && r.location);
+    const MULTI = /^\d+ Locations$/i;  // Workday's label for a posting in several cities
+    const openAll = rows.filter(r => r.status === "open");
+    const multi = openAll.filter(r => MULTI.test(r.location)).length;
+    const open = openAll.filter(r => r.location && !MULTI.test(r.location));
     const all = countBy(open, r => r.location), role = countBy(open.filter(r => r.in_role), r => r.location);
-    const top = [...all.keys()].sort((x, y) => all.get(y) - all.get(x)).slice(0, 15);
+    const top = [...all.keys()].sort((x, y) => all.get(y) - all.get(x) || x.localeCompare(y)).slice(0, 15);
     const head = top.length ? `${top[0]} leads with ${fmtInt(all.get(top[0]))} open postings` : "No locations yet";
     const remote = open.filter(r => /remote/i.test(r.location)).length;
-    const text = `Locations are counted exactly as each board writes them. ${fmtInt(remote)} open postings (${fmtPct(remote / Math.max(open.length, 1))}) mention "remote".`;
+    const text = `Locations are counted exactly as each board writes them. ${fmtInt(remote)} open postings (${fmtPct(remote / Math.max(open.length, 1))}) mention "remote". ` +
+      `${fmtInt(multi)} Workday postings list several cities ("N Locations") with no names and ${fmtInt(openAll.length - open.length - multi)} have no location; neither is counted here.`;
     new Chart(finding("f6", head, text), {
       type: "bar",
       data: { labels: top, datasets: [
