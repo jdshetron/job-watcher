@@ -57,11 +57,11 @@ that gets `429` or a server error is retried up to 4 times.
    analytics, product analytics, reporting analyst, insights analyst, analytics specialist,
    analytics associate, analytics consultant*; **or**
 2. contains *analyst* together with one of: *data, analytics, insight(s), reporting, business
-   intelligence, BI, business, product, marketing, operations, quantitative, financial*;
+   intelligence, BI, business, product, marketing, quantitative*;
 
 **and** it contains none of *security, SOC, threat, malware, cyber* (security analysts are a
 different job). So "Senior Data Analyst", "BI Analyst", "Analytics Engineer" and "Marketing Analyst"
-are in the role; "Data Engineer", "Security Analyst" and "Analyst Relations Manager" are not. The
+are in the role; "Data Engineer", "Security Analyst", "Financial Analyst" and "Operations Analyst" are not. The
 rule is in [`watcher/role.py`](watcher/role.py) and tested in `tests/test_role.py`.
 
 Every posting a board returns is kept, in the role or not.

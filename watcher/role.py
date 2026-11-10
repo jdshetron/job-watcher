@@ -9,7 +9,7 @@ and it contains none of the excluded words.
 import re
 
 DATA_WORDS = ["data", "analytics", "insights", "insight", "reporting", "business intelligence",
-              "bi", "business", "product", "marketing", "operations", "quantitative", "financial"]
+              "bi", "business", "product", "marketing", "quantitative"]
 ROLE_PHRASES = ["data analyst", "analytics engineer", "business intelligence", "data analytics",
                 "product analytics", "reporting analyst", "insights analyst", "analytics specialist",
                 "analytics associate", "analytics consultant"]
