@@ -165,15 +165,25 @@ python -m pytest          # the tests
 
 ## Website
 
-Three pages share one navigation bar, one stylesheet and one set of fonts and colours. They load
+Four pages share one navigation bar, one stylesheet and one set of fonts and colours. They load
 `data/history.csv` and `data/status.json` in the browser and compute everything there.
 
-- **Today** (`index.html`): time of the last run, every source's status and count, the four counts
+- **Today** (`index.html`): the best fits for my resume ("Picked for you"), time of the last run, every source's status and count, the four counts
   (days with a successful run, open, new today, removed today), and the new and removed postings of
   the latest run, switchable between the data-analyst role and all postings.
+- **Near me** (`near.html`): what's in the area. It starts at Fayetteville, AR (home, from the
+  resume) with a 200-mile radius, and the home town, radius, and whether to include US-remote
+  roles can be changed (or the browser's location used). It shows a map (Leaflet with
+  OpenStreetMap tiles) with a circle per town sized by its open postings, counts of postings in
+  range, the closest employer, the best fits for the resume, and every posting in range sorted by
+  fit, distance or date. Towns are found by name in the posting's location text using a built-in
+  list of about 230 places in `assets/places.js` (Arkansas and its neighbours in detail plus the
+  main US and world job hubs; a place like Paris, AR only matches when the state is named, so
+  "France - Paris" isn't read as Arkansas). Distances are straight-line miles. Postings listed only as
+  "N Locations", or with a town not in the list, can't be placed.
 - **Browse** (`browse.html`): open postings with a switch between the data-analyst role (default)
   and all postings, filters for employer, location and days open, a title search, a sort by
-  first-seen date, an Apply link on every posting, and a ☆ star that saves the posting to a
+  first-seen date (and by fit with the resume), an Apply link on every posting, and a ☆ star that saves the posting to a
   shortlist kept in the browser's `localStorage` (it survives reloads).
 - **Market** (`market.html`): six findings computed from the history file, each with a heading
   that states the finding, a paragraph, how it's computed, and a chart: new postings per day,
@@ -182,6 +192,25 @@ Three pages share one navigation bar, one stylesheet and one set of fonts and co
 
 The site is installable: `manifest.webmanifest` describes the app and `sw.js` is a service worker
 that loads pages and data from the network when online and serves the last saved copies offline.
+
+### Personal: fit with the resume
+
+[`assets/profile.js`](assets/profile.js) holds the public parts of my resume and
+[portfolio](https://jdshetron.github.io/portfolio-website/): skills (SQL, Power BI, business
+intelligence, reporting, Power Automate, Excel, SAP/ERP, Salesforce), level (finishing an M.S. in
+Applied Business Analytics in 2027 with about four years of work), and home (Fayetteville, AR).
+Each posting gets a **fit score** from its title and location:
+
+- \+3 each for Power BI, business intelligence/BI, SQL, "data analyst", "business analyst";
+  \+2 for reporting/dashboards and analytics; +1 each for data, Salesforce, SAP/ERP, automation,
+  engineering/construction, and operations/supply chain;
+- \+2 for entry-level words (junior, associate, analyst I/II, new grad), +1 for internships;
+  −1 senior, −2 manager/lead, −4 director/VP/principal/staff, −3 software engineer/developer;
+- \+1 in the data-analyst role; +1 in Arkansas; −8 outside the US.
+
+7 or more is a **Great fit**, 4–6 a **Good fit**. The Today page lists the six best fits
+("Picked for you"), Browse can sort by fit, and Near me ranks postings in range by it.
+Changing `profile.js` re-ranks everything; the history file is not affected.
 
 ## Files
 
@@ -203,10 +232,12 @@ that loads pages and data from the network when online and serves the last saved
 | `.github/workflows/daily.yml` | The daily run: fetch, build, status, issue, commit, deploy |
 | `.github/workflows/tests.yml` | Runs the tests on every push |
 | `.github/workflows/pages.yml` | Publishes the site to GitHub Pages |
-| `index.html`, `browse.html`, `market.html` | The three pages |
+| `index.html`, `near.html`, `browse.html`, `market.html` | The four pages |
 | `assets/style.css` | Shared fonts, colours and layout |
 | `assets/app.js` | Shared code: loading and parsing the data, dates, the shortlist, posting cards, service worker registration |
-| `assets/today.js`, `assets/browse.js`, `assets/market.js` | Page-specific code |
+| `assets/today.js`, `assets/near.js`, `assets/browse.js`, `assets/market.js` | Page-specific code |
+| `assets/profile.js` | My resume profile (skills, level, home) and the fit score |
+| `assets/places.js` | Built-in list of places with coordinates; reads a posting's location text into places, and measures distance |
 | `manifest.webmanifest` | Web app manifest (makes the site installable) |
 | `sw.js` | Service worker (offline support) |
 | `icons/` | App icons (SVG and PNG) |

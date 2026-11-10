@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Near me · Job Watcher</title>
+  <meta name="description" content="Open postings near home, on a map, ranked by fit with the resume.">
+  <meta name="theme-color" content="#090d1a">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <nav class="nav"><div class="nav-inner">
+    <a class="brand" href="index.html"><img src="icons/icon.svg" alt=""><span>Job Watcher</span></a>
+    <div class="nav-links">
+      <a href="index.html">Today</a>
+      <a href="near.html" aria-current="page">Near me</a>
+      <a href="browse.html">Browse</a>
+      <a href="market.html">Market</a>
+    </div>
+  </div></nav>
+
+  <header class="hero">
+    <div>
+      <span class="eyebrow"><span class="pulse"></span>What's in your area</span>
+      <h1>Hi <span id="first-name">there</span>, here's what's near <span class="grad" id="home-label">home</span></h1>
+      <p class="lede">Open postings within your radius, plus remote roles, ranked by how well each title fits <a id="resume-link" href="#" target="_blank" rel="noopener">your resume</a>.</p>
+    </div>
+    <div class="hero-card profile-card">
+      <div class="label">Your profile</div>
+      <div class="profile-name" id="p-name"></div>
+      <div class="muted small" id="p-headline"></div>
+      <div class="muted small" id="p-edu"></div>
+      <div class="chips" id="p-skills"></div>
+      <div class="profile-links"><a class="btn" id="p-portfolio" target="_blank" rel="noopener">Portfolio ↗</a><a class="btn" id="p-resume" target="_blank" rel="noopener">Resume (PDF) ↗</a></div>
+    </div>
+  </header>
+
+  <main>
+    <div id="offline" class="banner" hidden>You're offline. Showing the last data this device loaded. The map needs a connection.</div>
+    <div id="error" class="banner" hidden></div>
+
+    <section class="card">
+      <div class="controls near-controls">
+        <label class="field wide">Home<input id="home" list="home-list" autocomplete="off" placeholder="City, e.g. Fayetteville, AR"><datalist id="home-list"></datalist></label>
+        <label class="field">Radius<select id="radius">
+          <option value="25">25 miles</option><option value="50">50 miles</option><option value="100">100 miles</option>
+          <option value="200">200 miles</option><option value="350">350 miles</option><option value="600">600 miles</option>
+        </select></label>
+        <label class="field">Show<select id="scope">
+          <option value="fit">Good fits for my resume</option>
+          <option value="role">Data-analyst roles</option>
+          <option value="all">All postings</option>
+        </select></label>
+        <label class="field check"><input id="remote" type="checkbox" checked> Include remote (US)</label>
+        <button id="geo" class="btn" type="button">📍 Use my location</button>
+      </div>
+      <p class="muted small" id="geo-msg" hidden></p>
+      <div class="tiles near-tiles">
+        <div class="tile"><div class="label">Postings in range</div><div class="value" id="n-in">—</div><div class="sub" id="n-in-sub"></div></div>
+        <div class="tile" style="--tint:var(--accent-2)"><div class="label">Good fits</div><div class="value" id="n-fit">—</div><div class="sub">for your resume</div></div>
+        <div class="tile" style="--tint:var(--warn)"><div class="label">Remote (US)</div><div class="value" id="n-remote">—</div><div class="sub" id="n-remote-sub"></div></div>
+        <div class="tile" style="--tint:var(--down)"><div class="label">Closest employer</div><div class="value small-value" id="n-close">—</div><div class="sub" id="n-close-sub"></div></div>
+      </div>
+      <div id="map" class="map" role="img" aria-label="Map of open postings near home"></div>
+      <p class="muted small">Circles are towns with open postings in range, sized by how many there are. Click one to list them. Postings listed only as "N Locations" or with no town name can't be placed.</p>
+    </section>
+
+    <section class="card">
+      <h2>★ Best fits near you <span class="tag" id="best-count"></span></h2>
+      <p class="muted small" id="fit-explain"></p>
+      <ul id="best" class="postings"></ul>
+    </section>
+
+    <section class="card">
+      <div class="toolbar">
+        <h2 id="list-title">Everything in range</h2>
+        <label class="field inline">Sort<select id="sort"><option value="fit">Best fit</option><option value="dist">Closest</option><option value="new">Newest</option></select></label>
+      </div>
+      <ul id="list" class="postings"></ul>
+      <button id="more" class="btn more" type="button" hidden></button>
+    </section>
+  </main>
+  <footer>Distances are straight-line miles from the home town to each posting's town. Towns are found by name from a built-in list of about 230 places (all of Northwest Arkansas and the region, plus the main US and world job hubs). Fit uses only the job title: resume skills (SQL, Power BI, BI, reporting, analytics, Salesforce, SAP/ERP…) add points, senior titles take points away.</footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <script src="assets/profile.js"></script>
+  <script src="assets/places.js"></script>
+  <script src="assets/app.js"></script>
+  <script src="assets/near.js"></script>
+</body>
+</html>

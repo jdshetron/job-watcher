@@ -154,3 +154,30 @@ footer { color: var(--muted); font-size: .85rem; padding-top: 12px; padding-bott
   .chart-box { height: 280px; }
 }
 @media (prefers-reduced-motion: reduce) { *, *::before { animation: none !important; transition: none !important; } }
+
+/* --- personal profile and the Near me page ------------------------------------------------ */
+.pill.fit { background: rgba(255,200,87,.16); color: var(--warn); }
+.pill.dist { background: rgba(62,230,168,.10); color: var(--accent); font-weight: 600; }
+.posting .note { color: var(--muted); font-size: .8rem; margin-top: 2px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
+.chip { font-size: .76rem; font-weight: 600; padding: 3px 10px; border-radius: 999px; background: rgba(139,123,255,.14); color: #c4bbff; border: 1px solid rgba(139,123,255,.25); }
+.profile-name { font-family: var(--display); font-size: 1.35rem; font-weight: 700; margin-top: 6px; }
+.profile-links { display: flex; gap: 8px; flex-wrap: wrap; }
+.near-controls { grid-template-columns: 2fr 1fr 1.4fr auto auto; margin-bottom: 14px; }
+label.field.check { display: flex; align-items: center; gap: 8px; text-transform: none; letter-spacing: 0; font-size: .9rem; color: var(--text); padding-bottom: 10px; }
+label.field.check input { width: auto; accent-color: var(--accent); }
+label.field.inline { display: flex; align-items: center; gap: 8px; }
+label.field.inline select { width: auto; }
+.near-tiles { margin: 6px 0 16px; }
+.tile .value.small-value { font-size: 1.35rem; line-height: 1.25; margin-top: 8px; overflow-wrap: anywhere; }
+.map { height: 460px; border-radius: 12px; border: 1px solid var(--line); background: var(--bg-2); z-index: 0; }
+.leaflet-container { font-family: var(--font); background: #0b1020; }
+.map-tiles { filter: invert(1) hue-rotate(200deg) brightness(.8) contrast(.9) saturate(.6); }
+.leaflet-popup-content-wrapper, .leaflet-popup-tip { background: var(--card-solid); color: var(--text); border: 1px solid var(--line); }
+.leaflet-popup-content { font-size: .85rem; line-height: 1.5; max-width: 300px; }
+.leaflet-popup-content a { color: var(--accent); }
+.leaflet-container .leaflet-control-attribution { background: rgba(9,13,26,.7); color: var(--muted); }
+.leaflet-container .leaflet-control-attribution a { color: var(--muted); }
+.picked-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+@media (max-width: 900px) { .near-controls { grid-template-columns: 1fr 1fr; } .map { height: 360px; } }
+@media (max-width: 560px) { .nav-links a { padding: 7px 9px; font-size: .85rem; } .map { height: 300px; } }

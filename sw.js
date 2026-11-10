@@ -2,15 +2,17 @@
 // load); when offline, the last saved copies are served. The pinned chart library and fonts
 // never change, so they are served from the cache first.
 
-const CACHE = "job-watcher-v1";
+const CACHE = "job-watcher-v2";
 const SHELL = [
-  "./", "index.html", "browse.html", "market.html",
-  "assets/style.css", "assets/app.js", "assets/today.js", "assets/browse.js", "assets/market.js",
+  "./", "index.html", "near.html", "browse.html", "market.html",
+  "assets/style.css", "assets/app.js", "assets/today.js", "assets/browse.js", "assets/market.js", "assets/near.js", "assets/profile.js", "assets/places.js",
   "manifest.webmanifest", "icons/icon.svg", "icons/icon-192.png", "icons/icon-512.png",
   "data/history.csv", "data/status.json",
 ];
 const LIBS = [
   "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js",
+  "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js",
+  "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css",
   "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap",
 ];
 const CDN_HOSTS = ["cdnjs.cloudflare.com", "fonts.googleapis.com", "fonts.gstatic.com"];
