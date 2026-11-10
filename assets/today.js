@@ -28,6 +28,16 @@
     `<div style="animation-delay:${i * 80}ms"><b>${esc(r.employer)}</b><a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.title)}</a></div>`
   ).join("") || '<div class="muted">No open data-analyst postings.</div>';
 
+  // Picked for you: the open postings whose titles best fit the resume (assets/profile.js),
+  // newest first among equal scores.
+  $("picked-name").textContent = PROFILE.firstName;
+  $("picked-why").innerHTML = `Ranked by how well the title matches ${esc(PROFILE.firstName)}'s resume: SQL, Power BI, business intelligence, reporting and analytics add points, and entry-to-mid-level titles rank above senior ones. <a href="${esc(PROFILE.portfolio)}" target="_blank" rel="noopener">Portfolio ↗</a>`;
+  const picked = openRows.map(r => ({ r, f: fitScore(r) })).filter(x => x.f.score >= 4)
+    .sort((a, b) => b.f.score - a.f.score || b.r.first_seen.localeCompare(a.r.first_seen) || a.r.employer.localeCompare(b.r.employer))
+    .slice(0, 6);
+  $("picked").innerHTML = picked.map(x => postingHTML(x.r, { runDate: run, note: `Matches: ${x.f.reasons.slice(0, 4).join(", ")}` })).join("")
+    || '<li class="muted">No strong matches today.</li>';
+
   // Sources table.
   const perSource = new Map();
   for (const r of openRows) if (r.in_role) perSource.set(r.source, (perSource.get(r.source) || 0) + 1);

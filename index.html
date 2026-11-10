@@ -19,6 +19,7 @@
     <a class="brand" href="index.html"><img src="icons/icon.svg" alt=""><span>Job Watcher</span></a>
     <div class="nav-links">
       <a href="index.html" aria-current="page">Today</a>
+      <a href="near.html">Near me</a>
       <a href="browse.html">Browse</a>
       <a href="market.html">Market</a>
     </div>
@@ -46,6 +47,15 @@
       <div class="tile"><div class="label">New today</div><div class="value up" id="t-new">—</div><div class="sub" id="t-new-sub"></div></div>
       <div class="tile" style="--tint:var(--down)"><div class="label">Removed today</div><div class="value down" id="t-removed">—</div><div class="sub" id="t-removed-sub"></div></div>
     </div>
+
+    <section class="card">
+      <div class="picked-head">
+        <h2>★ Picked for <span id="picked-name">you</span> <span class="tag">from your resume</span></h2>
+        <a class="btn" href="near.html">See what's near Fayetteville →</a>
+      </div>
+      <p class="muted small" id="picked-why"></p>
+      <ul id="picked" class="postings"></ul>
+    </section>
 
     <section class="card">
       <div class="toolbar">
@@ -80,6 +90,7 @@
     </section>
   </main>
   <footer>Data: each employer's public job board (Greenhouse, Lever, Ashby, SmartRecruiters, Workday). Updated daily by GitHub Actions.</footer>
+  <script src="assets/profile.js"></script>
   <script src="assets/app.js"></script>
   <script src="assets/today.js"></script>
 </body>

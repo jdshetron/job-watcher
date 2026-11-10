@@ -19,6 +19,7 @@
     <a class="brand" href="index.html"><img src="icons/icon.svg" alt=""><span>Job Watcher</span></a>
     <div class="nav-links">
       <a href="index.html">Today</a>
+      <a href="near.html">Near me</a>
       <a href="browse.html" aria-current="page">Browse</a>
       <a href="market.html">Market</a>
     </div>
@@ -64,6 +65,7 @@
         <label class="field">Sort<select id="sort">
           <option value="new">First seen: newest first</option>
           <option value="old">First seen: oldest first</option>
+          <option value="fit">Best fit for my resume</option>
         </select></label>
       </div>
       <ul id="results" class="postings"></ul>
@@ -71,6 +73,7 @@
     </section>
   </main>
   <footer>Days open = days from the first day the tool saw a posting to the last run. Postings that were already open on the first run show "≥", since their real start is unknown.</footer>
+  <script src="assets/profile.js"></script>
   <script src="assets/app.js"></script>
   <script src="assets/browse.js"></script>
 </body>

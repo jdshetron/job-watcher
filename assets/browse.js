@@ -34,6 +34,10 @@
       if (lo != null) { const d = daysBetween(r.first_seen, run); if (d < lo || d > hi) return false; }
       return true;
     });
+    if ($("sort").value === "fit") {
+      const score = new Map(list.map(r => [r.posting_id, fitScore(r).score]));
+      return list.sort((a, b) => score.get(b.posting_id) - score.get(a.posting_id) || b.first_seen.localeCompare(a.first_seen));
+    }
     const dir = $("sort").value === "old" ? 1 : -1;
     return list.sort((a, b) => dir * a.first_seen.localeCompare(b.first_seen) || a.employer.localeCompare(b.employer) || a.title.localeCompare(b.title));
   }

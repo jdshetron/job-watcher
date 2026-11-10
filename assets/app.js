@@ -75,13 +75,19 @@ function employerColor(name) {
   let h = 0; for (const c of name) h = (h * 31 + c.charCodeAt(0)) >>> 0;
   return `hsl(${h % 360} 65% 45%)`;
 }
-function postingHTML(r, { star = false, starred = false, removed = false, runDate = null } = {}) {
+function postingHTML(r, { star = false, starred = false, removed = false, runDate = null, extra = null, note = "" } = {}) {
   const open = runDate && !removed ? daysBetween(r.first_seen, runDate) : null;
   const openText = open == null ? "" : r.first_run ? `open ≥ ${open} d` : `open ${open} d`;
+  // Fit with the resume (assets/profile.js), when that file is loaded on the page.
+  if (extra == null) {
+    const label = typeof fitScore === "function" ? fitLabel(fitScore(r).score) : null;
+    extra = label ? `<span class="pill fit">${label}</span>` : "";
+  }
   return `<li class="posting${removed ? " removed" : ""}">
     <span class="logo" style="background:${employerColor(r.employer)}" aria-hidden="true">${esc(r.employer[0])}</span>
     <div>
-      <div class="title">${esc(r.title || "(no title)")} ${r.in_role ? '<span class="pill role">Data analyst</span>' : ""}</div>
+      <div class="title">${esc(r.title || "(no title)")} ${r.in_role ? '<span class="pill role">Data analyst</span>' : ""} ${extra}</div>
+      ${note ? `<div class="note">${esc(note)}</div>` : ""}
       <div class="meta"><span>${esc(r.employer)}</span>${r.location ? `<span>📍 ${esc(r.location)}</span>` : ""}
         ${r.department ? `<span>${esc(r.department)}</span>` : ""}<span>first seen ${fmtDate(r.first_seen)}</span>
         ${removed ? `<span class="down">removed ${fmtDate(r.removed_date)}</span>` : openText ? `<span>${openText}</span>` : ""}</div>
