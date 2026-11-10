@@ -1,10 +1,10 @@
 {
-  "run_time": "2026-11-10T15:32:01Z",
+  "run_time": "2026-11-10T16:01:47Z",
   "run_date": "2026-11-10",
   "first_run_date": "2026-11-10",
   "days_with_success": 1,
-  "open": 12258,
-  "open_in_role": 201,
+  "open": 12255,
+  "open_in_role": 200,
   "new_today": 0,
   "removed_today": 0,
   "sources": [
@@ -13,7 +13,7 @@
       "employer": "Airbnb",
       "ats": "greenhouse",
       "ok": true,
-      "count": 206,
+      "count": 204,
       "error": ""
     },
     {
@@ -45,7 +45,7 @@
       "employer": "Lyft",
       "ats": "greenhouse",
       "ok": true,
-      "count": 156,
+      "count": 157,
       "error": ""
     },
     {
@@ -85,7 +85,7 @@
       "employer": "DoorDash",
       "ats": "greenhouse",
       "ok": true,
-      "count": 437,
+      "count": 438,
       "error": ""
     },
     {
@@ -117,7 +117,7 @@
       "employer": "Spotify",
       "ats": "lever",
       "ok": true,
-      "count": 86,
+      "count": 87,
       "error": ""
     },
     {
@@ -149,7 +149,7 @@
       "employer": "ServiceNow",
       "ats": "smartrecruiters",
       "ok": true,
-      "count": 747,
+      "count": 746,
       "error": ""
     },
     {
@@ -157,7 +157,7 @@
       "employer": "Bosch",
       "ats": "smartrecruiters",
       "ok": true,
-      "count": 1133,
+      "count": 1132,
       "error": ""
     },
     {
@@ -173,7 +173,7 @@
       "employer": "Salesforce",
       "ats": "workday",
       "ok": true,
-      "count": 1553,
+      "count": 1551,
       "error": ""
     },
     {
@@ -181,7 +181,7 @@
       "employer": "Capital One",
       "ats": "workday",
       "ok": true,
-      "count": 2063,
+      "count": 2064,
       "error": ""
     },
     {
@@ -189,7 +189,7 @@
       "employer": "Mastercard",
       "ats": "workday",
       "ok": true,
-      "count": 914,
+      "count": 913,
       "error": ""
     }
   ]
