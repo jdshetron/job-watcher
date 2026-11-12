@@ -1,19 +1,19 @@
 {
-  "run_time": "2026-11-11T19:41:54Z",
-  "run_date": "2026-11-11",
+  "run_time": "2026-11-12T20:04:41Z",
+  "run_date": "2026-11-12",
   "first_run_date": "2026-11-10",
-  "days_with_success": 2,
-  "open": 13875,
-  "open_in_role": 198,
-  "new_today": 604,
-  "removed_today": 485,
+  "days_with_success": 3,
+  "open": 13845,
+  "open_in_role": 202,
+  "new_today": 369,
+  "removed_today": 406,
   "sources": [
     {
       "name": "airbnb",
       "employer": "Airbnb",
       "ats": "greenhouse",
       "ok": true,
-      "count": 208,
+      "count": 214,
       "error": ""
     },
     {
@@ -21,7 +21,7 @@
       "employer": "Stripe",
       "ats": "greenhouse",
       "ok": true,
-      "count": 780,
+      "count": 782,
       "error": ""
     },
     {
@@ -37,7 +37,7 @@
       "employer": "Coinbase",
       "ats": "greenhouse",
       "ok": true,
-      "count": 277,
+      "count": 272,
       "error": ""
     },
     {
@@ -45,7 +45,7 @@
       "employer": "Lyft",
       "ats": "greenhouse",
       "ok": true,
-      "count": 154,
+      "count": 152,
       "error": ""
     },
     {
@@ -53,7 +53,7 @@
       "employer": "Pinterest",
       "ats": "greenhouse",
       "ok": true,
-      "count": 163,
+      "count": 165,
       "error": ""
     },
     {
@@ -61,7 +61,7 @@
       "employer": "Reddit",
       "ats": "greenhouse",
       "ok": true,
-      "count": 157,
+      "count": 147,
       "error": ""
     },
     {
@@ -69,7 +69,7 @@
       "employer": "Instacart",
       "ats": "greenhouse",
       "ok": true,
-      "count": 91,
+      "count": 90,
       "error": ""
     },
     {
@@ -77,7 +77,7 @@
       "employer": "Affirm",
       "ats": "greenhouse",
       "ok": true,
-      "count": 207,
+      "count": 219,
       "error": ""
     },
     {
@@ -85,7 +85,7 @@
       "employer": "DoorDash",
       "ats": "greenhouse",
       "ok": true,
-      "count": 442,
+      "count": 433,
       "error": ""
     },
     {
@@ -101,7 +101,7 @@
       "employer": "Chime",
       "ats": "greenhouse",
       "ok": true,
-      "count": 66,
+      "count": 68,
       "error": ""
     },
     {
@@ -109,7 +109,7 @@
       "employer": "Palantir",
       "ats": "lever",
       "ok": true,
-      "count": 303,
+      "count": 301,
       "error": ""
     },
     {
@@ -125,7 +125,7 @@
       "employer": "Ramp",
       "ats": "ashby",
       "ok": true,
-      "count": 176,
+      "count": 178,
       "error": ""
     },
     {
@@ -133,7 +133,7 @@
       "employer": "Notion",
       "ats": "ashby",
       "ok": true,
-      "count": 156,
+      "count": 161,
       "error": ""
     },
     {
@@ -141,7 +141,7 @@
       "employer": "Snowflake",
       "ats": "ashby",
       "ok": true,
-      "count": 381,
+      "count": 377,
       "error": ""
     },
     {
@@ -149,7 +149,7 @@
       "employer": "ServiceNow",
       "ats": "smartrecruiters",
       "ok": true,
-      "count": 788,
+      "count": 795,
       "error": ""
     },
     {
@@ -157,7 +157,7 @@
       "employer": "Bosch",
       "ats": "smartrecruiters",
       "ok": true,
-      "count": 1139,
+      "count": 1129,
       "error": ""
     },
     {
@@ -165,7 +165,7 @@
       "employer": "NVIDIA",
       "ats": "workday",
       "ok": true,
-      "count": 2000,
+      "count": 1999,
       "error": ""
     },
     {
@@ -173,7 +173,7 @@
       "employer": "Salesforce",
       "ats": "workday",
       "ok": true,
-      "count": 1575,
+      "count": 1586,
       "error": ""
     },
     {
@@ -181,7 +181,7 @@
       "employer": "Capital One",
       "ats": "workday",
       "ok": true,
-      "count": 2066,
+      "count": 2063,
       "error": ""
     },
     {
@@ -189,7 +189,7 @@
       "employer": "Mastercard",
       "ats": "workday",
       "ok": true,
-      "count": 897,
+      "count": 877,
       "error": ""
     },
     {
@@ -197,7 +197,7 @@
       "employer": "Tyson Foods",
       "ats": "workday",
       "ok": true,
-      "count": 744,
+      "count": 738,
       "error": ""
     },
     {
@@ -205,7 +205,7 @@
       "employer": "University of Arkansas System",
       "ats": "workday",
       "ok": true,
-      "count": 804,
+      "count": 798,
       "error": ""
     }
   ]
