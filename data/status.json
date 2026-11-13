@@ -1,19 +1,19 @@
 {
-  "run_time": "2026-11-12T20:04:41Z",
-  "run_date": "2026-11-12",
+  "run_time": "2026-11-13T19:50:58Z",
+  "run_date": "2026-11-13",
   "first_run_date": "2026-11-10",
-  "days_with_success": 3,
-  "open": 13845,
-  "open_in_role": 202,
-  "new_today": 369,
-  "removed_today": 406,
+  "days_with_success": 4,
+  "open": 13873,
+  "open_in_role": 196,
+  "new_today": 391,
+  "removed_today": 381,
   "sources": [
     {
       "name": "airbnb",
       "employer": "Airbnb",
       "ats": "greenhouse",
       "ok": true,
-      "count": 214,
+      "count": 215,
       "error": ""
     },
     {
@@ -21,7 +21,7 @@
       "employer": "Stripe",
       "ats": "greenhouse",
       "ok": true,
-      "count": 782,
+      "count": 788,
       "error": ""
     },
     {
@@ -29,7 +29,7 @@
       "employer": "Robinhood",
       "ats": "greenhouse",
       "ok": true,
-      "count": 155,
+      "count": 162,
       "error": ""
     },
     {
@@ -37,7 +37,7 @@
       "employer": "Coinbase",
       "ats": "greenhouse",
       "ok": true,
-      "count": 272,
+      "count": 265,
       "error": ""
     },
     {
@@ -45,7 +45,7 @@
       "employer": "Lyft",
       "ats": "greenhouse",
       "ok": true,
-      "count": 152,
+      "count": 148,
       "error": ""
     },
     {
@@ -53,7 +53,7 @@
       "employer": "Pinterest",
       "ats": "greenhouse",
       "ok": true,
-      "count": 165,
+      "count": 166,
       "error": ""
     },
     {
@@ -61,7 +61,7 @@
       "employer": "Reddit",
       "ats": "greenhouse",
       "ok": true,
-      "count": 147,
+      "count": 145,
       "error": ""
     },
     {
@@ -69,7 +69,7 @@
       "employer": "Instacart",
       "ats": "greenhouse",
       "ok": true,
-      "count": 90,
+      "count": 86,
       "error": ""
     },
     {
@@ -85,7 +85,7 @@
       "employer": "DoorDash",
       "ats": "greenhouse",
       "ok": true,
-      "count": 433,
+      "count": 430,
       "error": ""
     },
     {
@@ -101,7 +101,7 @@
       "employer": "Chime",
       "ats": "greenhouse",
       "ok": true,
-      "count": 68,
+      "count": 70,
       "error": ""
     },
     {
@@ -125,7 +125,7 @@
       "employer": "Ramp",
       "ats": "ashby",
       "ok": true,
-      "count": 178,
+      "count": 180,
       "error": ""
     },
     {
@@ -133,7 +133,7 @@
       "employer": "Notion",
       "ats": "ashby",
       "ok": true,
-      "count": 161,
+      "count": 167,
       "error": ""
     },
     {
@@ -141,7 +141,7 @@
       "employer": "Snowflake",
       "ats": "ashby",
       "ok": true,
-      "count": 377,
+      "count": 376,
       "error": ""
     },
     {
@@ -149,7 +149,7 @@
       "employer": "ServiceNow",
       "ats": "smartrecruiters",
       "ok": true,
-      "count": 795,
+      "count": 813,
       "error": ""
     },
     {
@@ -165,7 +165,7 @@
       "employer": "NVIDIA",
       "ats": "workday",
       "ok": true,
-      "count": 1999,
+      "count": 2000,
       "error": ""
     },
     {
@@ -173,7 +173,7 @@
       "employer": "Salesforce",
       "ats": "workday",
       "ok": true,
-      "count": 1586,
+      "count": 1606,
       "error": ""
     },
     {
@@ -181,7 +181,7 @@
       "employer": "Capital One",
       "ats": "workday",
       "ok": true,
-      "count": 2063,
+      "count": 2056,
       "error": ""
     },
     {
@@ -189,7 +189,7 @@
       "employer": "Mastercard",
       "ats": "workday",
       "ok": true,
-      "count": 877,
+      "count": 858,
       "error": ""
     },
     {
@@ -205,7 +205,7 @@
       "employer": "University of Arkansas System",
       "ats": "workday",
       "ok": true,
-      "count": 798,
+      "count": 809,
       "error": ""
     }
   ]
