@@ -1,19 +1,19 @@
 {
-  "run_time": "2026-11-14T18:15:37Z",
-  "run_date": "2026-11-14",
+  "run_time": "2026-11-15T18:56:59Z",
+  "run_date": "2026-11-15",
   "first_run_date": "2026-11-10",
-  "days_with_success": 5,
-  "open": 13845,
+  "days_with_success": 6,
+  "open": 13801,
   "open_in_role": 197,
-  "new_today": 91,
-  "removed_today": 129,
+  "new_today": 18,
+  "removed_today": 66,
   "sources": [
     {
       "name": "airbnb",
       "employer": "Airbnb",
       "ats": "greenhouse",
       "ok": true,
-      "count": 214,
+      "count": 213,
       "error": ""
     },
     {
@@ -21,7 +21,7 @@
       "employer": "Stripe",
       "ats": "greenhouse",
       "ok": true,
-      "count": 786,
+      "count": 785,
       "error": ""
     },
     {
@@ -85,7 +85,7 @@
       "employer": "DoorDash",
       "ats": "greenhouse",
       "ok": true,
-      "count": 427,
+      "count": 428,
       "error": ""
     },
     {
@@ -133,7 +133,7 @@
       "employer": "Notion",
       "ats": "ashby",
       "ok": true,
-      "count": 166,
+      "count": 165,
       "error": ""
     },
     {
@@ -149,7 +149,7 @@
       "employer": "ServiceNow",
       "ats": "smartrecruiters",
       "ok": true,
-      "count": 818,
+      "count": 815,
       "error": ""
     },
     {
@@ -157,7 +157,7 @@
       "employer": "Bosch",
       "ats": "smartrecruiters",
       "ok": true,
-      "count": 1129,
+      "count": 1127,
       "error": ""
     },
     {
@@ -173,7 +173,7 @@
       "employer": "Salesforce",
       "ats": "workday",
       "ok": true,
-      "count": 1611,
+      "count": 1600,
       "error": ""
     },
     {
@@ -189,7 +189,7 @@
       "employer": "Mastercard",
       "ats": "workday",
       "ok": true,
-      "count": 848,
+      "count": 842,
       "error": ""
     },
     {
@@ -197,7 +197,7 @@
       "employer": "Tyson Foods",
       "ats": "workday",
       "ok": true,
-      "count": 727,
+      "count": 716,
       "error": ""
     },
     {
@@ -205,7 +205,7 @@
       "employer": "University of Arkansas System",
       "ats": "workday",
       "ok": true,
-      "count": 795,
+      "count": 786,
       "error": ""
     }
   ]
