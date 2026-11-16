@@ -1,19 +1,19 @@
 {
-  "run_time": "2026-11-15T18:56:59Z",
-  "run_date": "2026-11-15",
+  "run_time": "2026-11-16T22:16:27Z",
+  "run_date": "2026-11-16",
   "first_run_date": "2026-11-10",
-  "days_with_success": 6,
-  "open": 13801,
-  "open_in_role": 197,
-  "new_today": 18,
-  "removed_today": 66,
+  "days_with_success": 7,
+  "open": 13783,
+  "open_in_role": 194,
+  "new_today": 145,
+  "removed_today": 170,
   "sources": [
     {
       "name": "airbnb",
       "employer": "Airbnb",
       "ats": "greenhouse",
       "ok": true,
-      "count": 213,
+      "count": 207,
       "error": ""
     },
     {
@@ -21,7 +21,7 @@
       "employer": "Stripe",
       "ats": "greenhouse",
       "ok": true,
-      "count": 785,
+      "count": 789,
       "error": ""
     },
     {
@@ -29,7 +29,7 @@
       "employer": "Robinhood",
       "ats": "greenhouse",
       "ok": true,
-      "count": 165,
+      "count": 166,
       "error": ""
     },
     {
@@ -37,7 +37,7 @@
       "employer": "Coinbase",
       "ats": "greenhouse",
       "ok": true,
-      "count": 265,
+      "count": 262,
       "error": ""
     },
     {
@@ -45,7 +45,7 @@
       "employer": "Lyft",
       "ats": "greenhouse",
       "ok": true,
-      "count": 148,
+      "count": 145,
       "error": ""
     },
     {
@@ -53,7 +53,7 @@
       "employer": "Pinterest",
       "ats": "greenhouse",
       "ok": true,
-      "count": 163,
+      "count": 165,
       "error": ""
     },
     {
@@ -61,7 +61,7 @@
       "employer": "Reddit",
       "ats": "greenhouse",
       "ok": true,
-      "count": 145,
+      "count": 148,
       "error": ""
     },
     {
@@ -69,7 +69,7 @@
       "employer": "Instacart",
       "ats": "greenhouse",
       "ok": true,
-      "count": 85,
+      "count": 84,
       "error": ""
     },
     {
@@ -77,7 +77,7 @@
       "employer": "Affirm",
       "ats": "greenhouse",
       "ok": true,
-      "count": 217,
+      "count": 212,
       "error": ""
     },
     {
@@ -85,7 +85,7 @@
       "employer": "DoorDash",
       "ats": "greenhouse",
       "ok": true,
-      "count": 428,
+      "count": 426,
       "error": ""
     },
     {
@@ -101,7 +101,7 @@
       "employer": "Chime",
       "ats": "greenhouse",
       "ok": true,
-      "count": 71,
+      "count": 74,
       "error": ""
     },
     {
@@ -109,7 +109,7 @@
       "employer": "Palantir",
       "ats": "lever",
       "ok": true,
-      "count": 302,
+      "count": 303,
       "error": ""
     },
     {
@@ -117,7 +117,7 @@
       "employer": "Spotify",
       "ats": "lever",
       "ok": true,
-      "count": 87,
+      "count": 88,
       "error": ""
     },
     {
@@ -125,7 +125,7 @@
       "employer": "Ramp",
       "ats": "ashby",
       "ok": true,
-      "count": 180,
+      "count": 177,
       "error": ""
     },
     {
@@ -141,7 +141,7 @@
       "employer": "Snowflake",
       "ats": "ashby",
       "ok": true,
-      "count": 376,
+      "count": 374,
       "error": ""
     },
     {
@@ -149,7 +149,7 @@
       "employer": "ServiceNow",
       "ats": "smartrecruiters",
       "ok": true,
-      "count": 815,
+      "count": 817,
       "error": ""
     },
     {
@@ -157,56 +157,56 @@
       "employer": "Bosch",
       "ats": "smartrecruiters",
       "ok": true,
-      "count": 1127,
+      "count": 1117,
       "error": ""
     },
     {
       "name": "nvidia",
       "employer": "NVIDIA",
       "ats": "workday",
-      "ok": true,
-      "count": 2000,
-      "error": ""
+      "ok": false,
+      "count": 0,
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://nvidia.wd5.myworkdayjobs.com/wday/cxs/nvidia/NVIDIAExternalCareerSite/jobs"
     },
     {
       "name": "salesforce",
       "employer": "Salesforce",
       "ats": "workday",
-      "ok": true,
-      "count": 1600,
-      "error": ""
+      "ok": false,
+      "count": 0,
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://salesforce.wd12.myworkdayjobs.com/wday/cxs/salesforce/External_Career_Site/jobs"
     },
     {
       "name": "capital-one",
       "employer": "Capital One",
       "ats": "workday",
-      "ok": true,
-      "count": 2061,
-      "error": ""
+      "ok": false,
+      "count": 0,
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://capitalone.wd12.myworkdayjobs.com/wday/cxs/capitalone/Capital_One/jobs"
     },
     {
       "name": "mastercard",
       "employer": "Mastercard",
       "ats": "workday",
-      "ok": true,
-      "count": 842,
-      "error": ""
+      "ok": false,
+      "count": 0,
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://mastercard.wd1.myworkdayjobs.com/wday/cxs/mastercard/CorporateCareers/jobs"
     },
     {
       "name": "tyson",
       "employer": "Tyson Foods",
       "ats": "workday",
-      "ok": true,
-      "count": 716,
-      "error": ""
+      "ok": false,
+      "count": 0,
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://tysonfoods.wd5.myworkdayjobs.com/wday/cxs/tysonfoods/TSN/jobs"
     },
     {
       "name": "uark-system",
       "employer": "University of Arkansas System",
       "ats": "workday",
-      "ok": true,
-      "count": 786,
-      "error": ""
+      "ok": false,
+      "count": 0,
+      "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://uasys.wd5.myworkdayjobs.com/wday/cxs/uasys/UASYS/jobs"
     }
   ]
 }
