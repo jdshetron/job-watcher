@@ -270,3 +270,28 @@ run_time,date,source,ok,count,error
 2026-11-17T21:02:39Z,2026-11-17,mastercard,false,0,HTTPError: 429 Client Error: Too Many Requests for url: https://mastercard.wd1.myworkdayjobs.com/wday/cxs/mastercard/CorporateCareers/jobs
 2026-11-17T21:02:39Z,2026-11-17,tyson,false,0,HTTPError: 429 Client Error: Too Many Requests for url: https://tysonfoods.wd5.myworkdayjobs.com/wday/cxs/tysonfoods/TSN/jobs
 2026-11-17T21:02:39Z,2026-11-17,uark-system,false,0,HTTPError: 429 Client Error: Too Many Requests for url: https://uasys.wd5.myworkdayjobs.com/wday/cxs/uasys/UASYS/jobs
+2026-11-18T20:40:05Z,2026-11-18,airbnb,true,204,
+2026-11-18T20:40:05Z,2026-11-18,stripe,true,788,
+2026-11-18T20:40:05Z,2026-11-18,robinhood,true,165,
+2026-11-18T20:40:05Z,2026-11-18,coinbase,true,256,
+2026-11-18T20:40:05Z,2026-11-18,lyft,true,150,
+2026-11-18T20:40:05Z,2026-11-18,pinterest,true,174,
+2026-11-18T20:40:05Z,2026-11-18,reddit,true,147,
+2026-11-18T20:40:05Z,2026-11-18,instacart,true,83,
+2026-11-18T20:40:05Z,2026-11-18,affirm,true,221,
+2026-11-18T20:40:05Z,2026-11-18,doordash,true,422,
+2026-11-18T20:40:05Z,2026-11-18,duolingo,true,57,
+2026-11-18T20:40:05Z,2026-11-18,chime,true,77,
+2026-11-18T20:40:05Z,2026-11-18,palantir,true,306,
+2026-11-18T20:40:05Z,2026-11-18,spotify,true,90,
+2026-11-18T20:40:05Z,2026-11-18,ramp,true,181,
+2026-11-18T20:40:05Z,2026-11-18,notion,true,166,
+2026-11-18T20:40:05Z,2026-11-18,snowflake,true,377,
+2026-11-18T20:40:05Z,2026-11-18,servicenow,true,840,
+2026-11-18T20:40:05Z,2026-11-18,bosch,true,1143,
+2026-11-18T20:40:05Z,2026-11-18,nvidia,false,0,HTTPError: 429 Client Error: Too Many Requests for url: https://nvidia.wd5.myworkdayjobs.com/wday/cxs/nvidia/NVIDIAExternalCareerSite/jobs
+2026-11-18T20:40:05Z,2026-11-18,salesforce,false,0,HTTPError: 429 Client Error: Too Many Requests for url: https://salesforce.wd12.myworkdayjobs.com/wday/cxs/salesforce/External_Career_Site/jobs
+2026-11-18T20:40:05Z,2026-11-18,capital-one,false,0,HTTPError: 429 Client Error: Too Many Requests for url: https://capitalone.wd12.myworkdayjobs.com/wday/cxs/capitalone/Capital_One/jobs
+2026-11-18T20:40:05Z,2026-11-18,mastercard,false,0,HTTPError: 429 Client Error: Too Many Requests for url: https://mastercard.wd1.myworkdayjobs.com/wday/cxs/mastercard/CorporateCareers/jobs
+2026-11-18T20:40:05Z,2026-11-18,tyson,false,0,HTTPError: 429 Client Error: Too Many Requests for url: https://tysonfoods.wd5.myworkdayjobs.com/wday/cxs/tysonfoods/TSN/jobs
+2026-11-18T20:40:05Z,2026-11-18,uark-system,false,0,HTTPError: 429 Client Error: Too Many Requests for url: https://uasys.wd5.myworkdayjobs.com/wday/cxs/uasys/UASYS/jobs
