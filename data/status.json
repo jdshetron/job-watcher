@@ -1,19 +1,19 @@
 {
-  "run_time": "2026-11-20T20:30:14Z",
-  "run_date": "2026-11-20",
+  "run_time": "2026-11-21T19:26:35Z",
+  "run_date": "2026-11-21",
   "first_run_date": "2026-11-10",
-  "days_with_success": 11,
-  "open": 13929,
-  "open_in_role": 195,
-  "new_today": 243,
-  "removed_today": 166,
+  "days_with_success": 12,
+  "open": 14013,
+  "open_in_role": 198,
+  "new_today": 122,
+  "removed_today": 40,
   "sources": [
     {
       "name": "airbnb",
       "employer": "Airbnb",
       "ats": "greenhouse",
       "ok": true,
-      "count": 203,
+      "count": 202,
       "error": ""
     },
     {
@@ -21,7 +21,7 @@
       "employer": "Stripe",
       "ats": "greenhouse",
       "ok": true,
-      "count": 779,
+      "count": 778,
       "error": ""
     },
     {
@@ -29,7 +29,7 @@
       "employer": "Robinhood",
       "ats": "greenhouse",
       "ok": true,
-      "count": 165,
+      "count": 163,
       "error": ""
     },
     {
@@ -37,7 +37,7 @@
       "employer": "Coinbase",
       "ats": "greenhouse",
       "ok": true,
-      "count": 254,
+      "count": 252,
       "error": ""
     },
     {
@@ -45,7 +45,7 @@
       "employer": "Lyft",
       "ats": "greenhouse",
       "ok": true,
-      "count": 144,
+      "count": 148,
       "error": ""
     },
     {
@@ -61,7 +61,7 @@
       "employer": "Reddit",
       "ats": "greenhouse",
       "ok": true,
-      "count": 145,
+      "count": 148,
       "error": ""
     },
     {
@@ -69,7 +69,7 @@
       "employer": "Instacart",
       "ats": "greenhouse",
       "ok": true,
-      "count": 89,
+      "count": 92,
       "error": ""
     },
     {
@@ -77,7 +77,7 @@
       "employer": "Affirm",
       "ats": "greenhouse",
       "ok": true,
-      "count": 218,
+      "count": 222,
       "error": ""
     },
     {
@@ -85,7 +85,7 @@
       "employer": "DoorDash",
       "ats": "greenhouse",
       "ok": true,
-      "count": 413,
+      "count": 408,
       "error": ""
     },
     {
@@ -117,7 +117,7 @@
       "employer": "Spotify",
       "ats": "lever",
       "ok": true,
-      "count": 89,
+      "count": 91,
       "error": ""
     },
     {
@@ -125,7 +125,7 @@
       "employer": "Ramp",
       "ats": "ashby",
       "ok": true,
-      "count": 185,
+      "count": 187,
       "error": ""
     },
     {
@@ -133,7 +133,7 @@
       "employer": "Notion",
       "ats": "ashby",
       "ok": true,
-      "count": 169,
+      "count": 170,
       "error": ""
     },
     {
@@ -141,7 +141,7 @@
       "employer": "Snowflake",
       "ats": "ashby",
       "ok": true,
-      "count": 372,
+      "count": 374,
       "error": ""
     },
     {
@@ -149,7 +149,7 @@
       "employer": "ServiceNow",
       "ats": "smartrecruiters",
       "ok": true,
-      "count": 924,
+      "count": 998,
       "error": ""
     },
     {
