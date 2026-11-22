@@ -1,12 +1,12 @@
 {
-  "run_time": "2026-11-21T19:26:35Z",
-  "run_date": "2026-11-21",
+  "run_time": "2026-11-22T19:49:30Z",
+  "run_date": "2026-11-22",
   "first_run_date": "2026-11-10",
-  "days_with_success": 12,
-  "open": 14013,
-  "open_in_role": 198,
-  "new_today": 122,
-  "removed_today": 40,
+  "days_with_success": 13,
+  "open": 14011,
+  "open_in_role": 199,
+  "new_today": 5,
+  "removed_today": 7,
   "sources": [
     {
       "name": "airbnb",
@@ -21,7 +21,7 @@
       "employer": "Stripe",
       "ats": "greenhouse",
       "ok": true,
-      "count": 778,
+      "count": 777,
       "error": ""
     },
     {
@@ -45,7 +45,7 @@
       "employer": "Lyft",
       "ats": "greenhouse",
       "ok": true,
-      "count": 148,
+      "count": 145,
       "error": ""
     },
     {
@@ -149,7 +149,7 @@
       "employer": "ServiceNow",
       "ats": "smartrecruiters",
       "ok": true,
-      "count": 998,
+      "count": 1000,
       "error": ""
     },
     {
